@@ -8,7 +8,7 @@
     <meta property="og:title" content="Diffusion Beats Autoregressive in Data-Constrained Settings" />
     <meta property="og:description" content="Masked diffusion models significantly outperform autoregressive models when compute is abundant but data is scarce." />
     <meta property="og:url" content="https://diffusion-data-constraint.github.io/" />
-    <meta property="og:image" content="https://diffusion-data-constraint.github.io/static/images/preview.png" />
+    <meta property="og:image" content="https://diffusion-data-constraint.github.io/static/images/preview.jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
     <meta name="description"
@@ -22,9 +22,9 @@
     <meta name="twitter:description"
         content="Masked diffusion models significantly outperform autoregressive models when compute is abundant but data is scarce." />
     <meta name="twitter:url" content="https://diffusion-data-constraint.github.io/" />
-    <meta name="twitter:image" content="https://diffusion-data-constraint.github.io/static/images/preview.png" />
+    <meta name="twitter:image" content="https://diffusion-data-constraint.github.io/static/images/preview.jpeg" />
     <meta name="twitter:site" content="@pathak2206" />
-    <meta name="twitter:image:src" content="https://diffusion-data-constraint.github.io/static/images/preview.png" />
+    <meta name="twitter:image:src" content="https://diffusion-data-constraint.github.io/static/images/preview.jpeg" />
     <meta name="twitter:image_alt" content="Diffusion vs Autoregressive Models" />
 
     <title>Diffusion Beats Autoregressive in Data-Constrained Settings</title>
@@ -65,6 +65,120 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
 
+    <style>
+        /* Mobile-specific styles */
+        @media screen and (max-width: 768px) {
+            .title.is-1 {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .publication-authors {
+                font-size: 0.9rem !important;
+                line-height: 1.8 !important;
+                padding: 0 1rem !important;
+                margin-bottom: 1rem !important;
+                text-align: center !important;
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 0.5rem 1rem !important;
+            }
+            
+            .author-block {
+                display: inline-block !important;
+                margin: 0 !important;
+                white-space: nowrap !important;
+                flex: 0 0 auto !important;
+            }
+            
+            .publication-authors .author-block:not(:last-child):after {
+                content: "";
+            }
+            
+            .hero-body {
+                padding: 2rem 0.5rem !important;
+            }
+            
+            .container.is-max-desktop {
+                padding: 0 1rem !important;
+            }
+            
+            .buttons {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 1rem !important;
+            }
+            
+            .button {
+                margin: 0.25rem !important;
+                font-size: 0.9rem !important;
+            }
+            
+            .columns.is-centered {
+                margin: 0 !important;
+            }
+            
+            .column.is-half {
+                padding: 0.5rem !important;
+            }
+            
+            .column.is-three-fourths {
+                padding: 0.5rem !important;
+            }
+            
+            .method-overview-text p {
+                font-size: 0.95rem;
+            }
+            
+            figure img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            .table-container {
+                font-size: 0.8rem;
+            }
+            
+            .table th, .table td {
+                padding: 0.5rem 0.25rem !important;
+                font-size: 0.75rem !important;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .title.is-1 {
+                font-size: 1.5rem !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .publication-authors {
+                font-size: 0.8rem !important;
+                line-height: 1.8 !important;
+                padding: 0 0.5rem !important;
+                gap: 0.3rem 0.8rem !important;
+            }
+            
+            .hero-body {
+                padding: 1.5rem 0.25rem !important;
+            }
+            
+            .container.is-max-desktop {
+                padding: 0 0.5rem !important;
+            }
+            
+            .section {
+                padding: 1.5rem 0;
+            }
+            
+            .button {
+                font-size: 0.8rem !important;
+                padding: 0.5rem 0.75rem !important;
+            }
+        }
+    </style>
+
     <!-- mathjax -->
     <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -87,9 +201,9 @@
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
                         <p style="padding: 20px;" />
-                        <h1 class="title is-1 publication-title" style=" white-space: nowrap;">
+                        <h1 class="title is-1 publication-title">
                             <span id="main-title">
-                                Diffusion Beats Autoregressive in Data-Constrained Settings
+                                Diffusion Beats Autoregressive<br>in Data-Constrained Settings
                             </span>
                         </h1>
                         <div class="is-size-5 publication-authors" style="line-height: 2.2; font-weight: 500; white-space: nowrap;">
@@ -98,11 +212,11 @@
                             </span>
                             &nbsp;&nbsp;
                             <span class="author-block">
-                                <a href="https://www.linkedin.com/in/mengning-wu-2ba8562ba/" target="_blank" class="author-name">Menging Wu</a><sup>*</sup>
+                                <a href="#" target="_blank" class="author-name">Menging Wu</a><sup>*</sup>
                             </span>
                             &nbsp;&nbsp;
                             <span class="author-block">
-                                <a href="https://www.linkedin.com/in/amir-zadeh-894921320" target="_blank" class="author-name">Amir Zadeh</a>
+                                <a href="#" target="_blank" class="author-name">Amir Zadeh</a>
                             </span>
                             &nbsp;&nbsp;
                             <span class="author-block">
@@ -115,7 +229,8 @@
                         </div>
                         <p style="padding: 0.2rem;" />
                         <div class="is-size-5 publication-authors">
-                            <span class="author-block" style="color: #252525;">Carnegie Mellon University &nbsp;&nbsp;&nbsp; Lambda</span><br>
+                            <span class="author-block" style="color: #252525; margin-right: 1.5em;">Carnegie Mellon University</span>
+                            <span class="author-block" style="color: #252525;">Lambda</span>
                             <br style="line-height: 2px" />
                             <span class="author-block" style="font-size: 0.8em; color: #252525; font-style: italic;"><sup>*</sup>Equal contribution</span>
                         </div>
@@ -124,7 +239,7 @@
 
                         <div class="buttons is-centered">
                             <button class="external-link button is-medium is-ghost publication-links is-rounded">
-                                <a href="#" target="_blank"
+                                <a href="https://arxiv.org/abs/2502.01491" target="_blank"
                                     style="text-decoration:none;">
                                     <span class="icon is-small">
                                         <i class="ai ai-arxiv"></i>
@@ -140,7 +255,6 @@
                                     <span>pdf</span>
                                 </a>
                             </button>
-                            
                             <button class="external-link button is-medium is-ghost publication-links is-rounded">
                                 <a href="https://github.com/wmn-231314/diffusion-data-constraint" target="_blank">
                                     <span class="icon is-small">
@@ -228,26 +342,22 @@
                         <p><strong>1. Diffusion models surpass autoregressive models given sufficient compute.</strong> 
                         Across a wide range of unique token budgets, AR models initially outperform diffusion models at low compute, 
                         but quickly saturate. Beyond a critical compute threshold, diffusion models continue improving and ultimately 
-                        achieve better performance. <a href="#method-overview">(See Figure 1)</a></p>
+                        achieve better performance.</p>
                         
                         <p><strong>2. Diffusion models benefit far more from repeated data.</strong> 
                         While AR models can effectively use repeated data for up to 4 epochs, diffusion models can be trained 
-                        on repeated data for up to <strong>100 epochs</strong> with repeated data almost as effective as fresh data. 
-                        <a href="#contour-plots">(See Figure 2)</a> &amp; <a href="#data-value-decay">(Figure 3)</a> &amp; <a href="#extrapolated-epochs">(Figure 5, extrapolated)</a></p>
+                        on repeated data for up to <strong>100 epochs</strong> with repeated data almost as effective as fresh data.</p>
                         
                         <p><strong>3. Diffusion models have a much higher effective epoch count.</strong> 
                         We find \(R_D^* \approx 500\) for diffusion models compared to \(R_D^* \approx 15\) for AR models, 
-                        suggesting diffusion models can benefit from repeated data over far more epochs without major degradation. 
-                        <a href="#training-curves">(See Figure 4)</a></p>
+                        suggesting diffusion models can benefit from repeated data over far more epochs without major degradation.</p>
                         
                         <p><strong>4. Critical compute point follows a power law with dataset size.</strong> 
                         We derive a closed-form expression \(C_{\text{crit}}(U) = 2.12 \times 10^{15} \cdot U^{2.174}\) 
-                        that predicts when diffusion becomes the favorable modeling choice for any given dataset size. 
-                        <a href="#critical-compute">(See Figure 6)</a></p>
+                        that predicts when diffusion becomes the favorable modeling choice for any given dataset size.</p>
                         
                         <p><strong>5. Diffusion models yield better downstream performance.</strong> 
-                        The validation loss improvements translate to consistent gains across diverse downstream language tasks. 
-                        <a href="#downstream-results">(See Table 2)</a></p>
+                        The validation loss improvements translate to consistent gains across diverse downstream language tasks.</p>
                     </div>
                 </div>
             </div>
@@ -257,7 +367,7 @@
     <p style="padding: 20px;" />
 
     <!-- Contour Plots -->
-    <section class="section" id="contour-plots">
+    <section class="section">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-three-quarters">
@@ -299,7 +409,7 @@
     </section>
 
     <!-- Data Value Decay -->
-    <section class="section" id="data-value-decay">
+    <section class="section">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-three-quarters">
@@ -332,7 +442,7 @@
     </section>
 
     <!-- Training Curves -->
-    <section class="section" id="training-curves">
+    <section class="section">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-three-quarters">
@@ -341,9 +451,7 @@
                         <p>
                             Training curves for different epoch counts using the same total compute show that AR models 
                             overfit with increased repetition (diverging loss curves), while diffusion models exhibit 
-                            overlapping curves, indicating much greater robustness to data repetition. We also show 
-                            extrapolated scaling behavior demonstrating that diffusion models can effectively use 
-                            repeated data for up to 100 epochs compared to only 4 epochs for AR models.
+                            overlapping curves, indicating much greater robustness to data repetition.
                         </p>
                     </div>
                 </div>
@@ -371,27 +479,11 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Extrapolated Scaling Curves -->
-            <div class="container is-max-desktop" id="extrapolated-epochs">
-                <div class="columns is-centered">
-                    <div class="column is-three-fourths">
-                        <figure>
-                            <img src="./static/images/extrapolate.png" alt="Extrapolated scaling curves" 
-                                draggable="false" />
-                            <figcaption class="has-text-centered">
-                                <strong>Extrapolated scaling behavior:</strong> AR models benefit from repeated data up to ~4 epochs, 
-                                while diffusion models benefit up to ~100 epochs.
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- Critical Compute Analysis -->
-    <section class="section" id="critical-compute">
+    <section class="section">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-three-quarters">
@@ -448,8 +540,8 @@
             </div>
             
             <div class="container is-max-desktop">
-                <div class="table-container">
-                    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                <div class="table-container" style="overflow-x: auto;">
+                    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="min-width: 600px;">
                         <caption style="caption-side: top; padding: 10px 0; font-weight: bold;">
                             Downstream Results: Best AR vs Diffusion models in data-constrained settings
                         </caption>
@@ -557,9 +649,9 @@
                     <h2 class="title is-3">Key Takeaway</h2>
                     <div class="content has-text-justified">
                         <div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; text-align: center;">
-                            <!-- <p style="font-size: 1.2em;  margin-bottom: 10px;">
+                            <p style="font-size: 1.2em; font-weight: margin-bottom: 10px;">
                                 For practitioners, our takeaway is simple:
-                            </p> -->
+                            </p>
                             <p style="font-size: 1.1em; font-style: italic;">
                                 If you are compute-constrained, use autoregressive models;<br>
                                 if you are data-constrained, use diffusion models.
@@ -571,7 +663,7 @@
         </div>
     </section>
 
-    <!-- <section class="section" id="paper">
+    <section class="section" id="paper">
         <div class="container is-mobile">
             <div class="columns is-centered has-text-centered">
                 <div class="container content">
@@ -587,12 +679,12 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <footer class="footer">
         <div class="container">
             <div class="content has-text-centered">
-                <a class="icon-link" href="#" target="_blank">
+                <a class="icon-link" href="https://arxiv.org/abs/2502.01491" target="_blank">
                     <i class="ai ai-arxiv"></i>
                 </a>
                 &nbsp;
