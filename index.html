@@ -482,6 +482,32 @@
         </div>
     </section>
 
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-quarters">
+                    <h2 class="title is-3">Extrapolated Training Curves</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Predicted validation loss for AR models (left) and Diffusion models (right) under compute-optimal settings, extrapolated to larger compute budgets. Dotted lines indicate the hypothetical case
+                            where repeated data is as valuable as new data. For AR, this holds up to about 4 epochs; for diffusion,
+                            up to 100 epochs, showing that diffusion models are much more robust to data repetition.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column">
+                        <figure>
+                            <img src="./static/images/extrapolate.png" alt="Extrapolated validation loss curves for AR and Diffusion models" draggable="false" style="max-width:100%;"/>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Critical Compute Analysis -->
     <section class="section">
         <div class="container is-max-desktop">
@@ -663,7 +689,7 @@
         </div>
     </section>
 
-    <section class="section" id="paper">
+    <!-- <section class="section" id="paper">
         <div class="container is-mobile">
             <div class="columns is-centered has-text-centered">
                 <div class="container content">
@@ -679,7 +705,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <footer class="footer">
         <div class="container">
