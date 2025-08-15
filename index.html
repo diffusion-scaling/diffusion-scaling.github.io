@@ -675,6 +675,28 @@
         </div>
     </section>
 
+    <section class="section" id="data-efficiency">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-quarters">
+                    <h2 class="title is-3">Why is Diffusion More Data-Efficient than Autoregressive?</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            <strong>Exposure to different token orderings helps explain diffusion’s data efficiency.</strong>
+                            By adding explicit data augmentations to AR training, we find that diffusion models’ advantage arises from their exposure to a diverse set of token orderings. Essentially, the randomized masking in diffusion’s objective serves as implicit data augmentation, allowing it to generalize beyond the fixed left-to-right factorization of AR models.
+                        </p>
+                        <figure style="margin: 2em 0;">
+                            <img src="./static/images/rand_ordering.png" alt="Random Orderings in Diffusion Models" style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <figcaption style="margin-top: 0.5em; font-size: 1em; color: #555;">
+                                <em>Validation loss improves as the number of token orderings $N$ increases in AR training. At $N=16$, performance approaches that of diffusion models.</em>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Takeaway -->
     <section class="section">
         <div class="container is-max-desktop">
