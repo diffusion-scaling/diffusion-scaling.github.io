@@ -318,18 +318,7 @@
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
                         <p>
-                            Autoregressive (AR) models have long dominated the landscape of large language models, driving 
-                            progress across a wide range of tasks. Recently, diffusion-based language models have emerged 
-                            as a promising alternative, though their advantages over AR models remain underexplored. In this 
-                            paper, we systematically study masked diffusion models in data-constrained settings—where training 
-                            involves repeated passes over limited data—and find that they significantly outperform AR models 
-                            when compute is abundant but data is scarce. Diffusion models make better use of repeated data, 
-                            achieving lower validation loss and superior downstream performance. We interpret this advantage 
-                            as implicit data augmentation: masked diffusion exposes the model to a diverse distribution of 
-                            token orderings and prediction tasks, unlike AR's fixed left-to-right factorization. We find new 
-                            scaling laws for diffusion models and derive a closed-form expression for the critical compute 
-                            threshold at which diffusion begins to outperform AR. These results suggest that when data, not 
-                            compute, is the bottleneck, diffusion models offer a compelling alternative to the standard AR paradigm.
+                            Autoregressive (AR) models have long dominated the landscape of large language models, driving progress across a wide range of tasks. Recently, diffusion-based language models have emerged as a promising alternative, though their advantages over AR models remain underexplored. In this paper, we systematically study masked diffusion models in data-constrained settings-where training involves repeated passes over limited data and find that they significantly outperform AR models when compute is abundant but data is scarce. Diffusion models make better use of repeated data, achieving lower validation loss and superior downstream performance. We find new scaling laws for diffusion models and derive a closed-form expression for the critical compute threshold at which diffusion begins to outperform AR. Finally, we explain why diffusion models excel in this regime: their randomized masking objective implicitly trains over a rich distribution of token orderings, acting as an implicit data augmentation that AR's fixed left-to-right factorization lacks. Our results suggest that when data, not compute, is the bottleneck, diffusion models offer a compelling alternative to the standard AR paradigm. 
                         </p>
                     </div>
                 </div>
