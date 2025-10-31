@@ -558,9 +558,11 @@
                     <h2 class="title is-3">Downstream Performance</h2>
                     <div class="content has-text-justified">
                         <p>
-                            We evaluate the best-performing models on diverse downstream benchmarks. Across tasks and 
-                            data scales, diffusion models consistently achieve higher accuracy than their AR counterparts, 
-                            validating that the data efficiency gains in validation loss translate into stronger downstream performance.
+                            We evaluate the best-performing models (selected by validation loss) on downstream benchmarks 
+                            to test whether lower validation loss translates to better generalization. Since AR models 
+                            overfit earlier, we also test flop-matched overfitted AR models. While these sometimes 
+                            outperform their best-validation variants, diffusion models consistently achieve the highest 
+                            downstream performance across nearly all tasks.
                         </p>
                     </div>
                 </div>
@@ -570,21 +572,14 @@
                 <div class="table-container" style="overflow-x: auto;">
                     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="min-width: 600px;">
                         <caption style="caption-side: top; padding: 10px 0; font-weight: bold;">
-                            Downstream Results: Best AR vs Diffusion models in data-constrained settings
+                            Downstream Results (100M unique tokens): Random baseline, AR, AR (Flop matched), Diffusion
                         </caption>
                         <thead>
                             <tr>
                                 <th class="has-text-centered">Benchmarks</th>
                                 <th class="has-text-centered">Random Baseline</th>
-                                <th class="has-text-centered" colspan="2">100M unique tokens</th>
-                                <th class="has-text-centered" colspan="2">500M unique tokens</th>
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <th></th>
                                 <th class="has-text-centered">AR</th>
-                                <th class="has-text-centered">Diffusion</th>
-                                <th class="has-text-centered">AR</th>
+                                <th class="has-text-centered">AR (Flop matched)</th>
                                 <th class="has-text-centered">Diffusion</th>
                             </tr>
                         </thead>
@@ -593,73 +588,64 @@
                                 <td>ARC-Easy</td>
                                 <td class="has-text-centered">25.00</td>
                                 <td class="has-text-centered">35.63</td>
+                                <td class="has-text-centered">35.35</td>
                                 <td class="has-text-centered has-text-weight-bold">37.84</td>
-                                <td class="has-text-centered">43.79</td>
-                                <td class="has-text-centered has-text-weight-bold">45.95</td>
                             </tr>
                             <tr>
                                 <td>BoolQ</td>
                                 <td class="has-text-centered">50.00</td>
                                 <td class="has-text-centered">46.00</td>
+                                <td class="has-text-centered">38.23</td>
                                 <td class="has-text-centered has-text-weight-bold">49.38</td>
-                                <td class="has-text-centered">51.87</td>
-                                <td class="has-text-centered has-text-weight-bold">55.26</td>
                             </tr>
                             <tr>
                                 <td>COPA</td>
                                 <td class="has-text-centered">50.00</td>
                                 <td class="has-text-centered">56.33</td>
+                                <td class="has-text-centered">54.00</td>
                                 <td class="has-text-centered has-text-weight-bold">59.00</td>
-                                <td class="has-text-centered has-text-weight-bold">67.00</td>
-                                <td class="has-text-centered">64.83</td>
                             </tr>
                             <tr>
                                 <td>HellaSwag</td>
                                 <td class="has-text-centered">25.00</td>
                                 <td class="has-text-centered">27.37</td>
+                                <td class="has-text-centered">29.03</td>
                                 <td class="has-text-centered has-text-weight-bold">30.24</td>
-                                <td class="has-text-centered">32.28</td>
-                                <td class="has-text-centered has-text-weight-bold">35.33</td>
                             </tr>
                             <tr>
                                 <td>PiQA</td>
                                 <td class="has-text-centered">50.00</td>
-                                <td class="has-text-centered has-text-weight-bold">60.94</td>
+                                <td class="has-text-centered">60.94</td>
+                                <td class="has-text-centered has-text-weight-bold">61.64</td>
                                 <td class="has-text-centered">60.72</td>
-                                <td class="has-text-centered has-text-weight-bold">65.71</td>
-                                <td class="has-text-centered">65.61</td>
                             </tr>
                             <tr>
                                 <td>RACE</td>
                                 <td class="has-text-centered">25.00</td>
                                 <td class="has-text-centered">25.28</td>
+                                <td class="has-text-centered">24.88</td>
                                 <td class="has-text-centered has-text-weight-bold">28.96</td>
-                                <td class="has-text-centered">28.28</td>
-                                <td class="has-text-centered has-text-weight-bold">31.44</td>
                             </tr>
                             <tr>
                                 <td>WinoGrande XL</td>
                                 <td class="has-text-centered">50.00</td>
                                 <td class="has-text-centered">48.87</td>
+                                <td class="has-text-centered">49.41</td>
                                 <td class="has-text-centered has-text-weight-bold">50.97</td>
-                                <td class="has-text-centered">50.61</td>
-                                <td class="has-text-centered has-text-weight-bold">51.51</td>
                             </tr>
                             <tr>
                                 <td>SciQ</td>
                                 <td class="has-text-centered">25.00</td>
                                 <td class="has-text-centered">58.05</td>
+                                <td class="has-text-centered">50.50</td>
                                 <td class="has-text-centered has-text-weight-bold">68.67</td>
-                                <td class="has-text-centered">67.82</td>
-                                <td class="has-text-centered has-text-weight-bold">79.13</td>
                             </tr>
                             <tr>
                                 <td>Lambada</td>
                                 <td class="has-text-centered">00.00</td>
                                 <td class="has-text-centered">10.91</td>
+                                <td class="has-text-centered">5.53</td>
                                 <td class="has-text-centered has-text-weight-bold">15.19</td>
-                                <td class="has-text-centered">15.07</td>
-                                <td class="has-text-centered has-text-weight-bold">22.30</td>
                             </tr>
                         </tbody>
                     </table>
@@ -698,7 +684,7 @@
                     <h2 class="title is-3">Key Takeaway</h2>
                     <div class="content has-text-justified">
                         <div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; text-align: center;">
-                            <p style="font-size: 1.2em; font-weight: margin-bottom: 10px;">
+                            <p style="font-size: 1.2em; margin-bottom: 10px; font-weight: bold;">
                                 For practitioners, our takeaway is simple:
                             </p>
                             <p style="font-size: 1.1em; font-style: italic;">
